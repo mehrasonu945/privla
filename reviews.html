@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Northwoods Soap Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Northwoods Soap Co." class="logo-img">
+                    <span>Northwoods Soap</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-heart"></i> About</a></li>
+                    <li><a href="reviews.html" class="nav-link active"><i class="fas fa-star"></i> Reviews</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span>0</span></a>
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <a href="index.html">Home</a> / <span>Reviews</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- REVIEWS HERO -->
+    <section class="reviews-hero">
+        <div class="container">
+            <div class="reviews-stats">
+                <div class="avg-rating">
+                    <span class="rating-number">4.9</span>
+                    <span class="rating-slash">/</span>
+                    <div class="stars-large">★★★★★</div>
+                    <div class="review-count">2,847 verified reviews</div>
+                </div>
+                <div class="rating-breakdown">
+                    <div class="rating-bar">
+                        <span>5 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 92%"></div>
+                        </div>
+                        <span>(2,618)</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 7%"></div>
+                        </div>
+                        <span>(189)</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 1%"></div>
+                        </div>
+                        <span>(40)</span>
+                    </div>
+                </div>
+            </div>
+            <h1>What Our Customers Say</h1>
+            <p class="hero-subtitle">Real reviews from real people who love our products</p>
+        </div>
+    </section>
+
+    <!-- REVIEWS FILTERS -->
+    <section class="reviews-filters section-padding">
+        <div class="container">
+            <div class="filters-container">
+                <div class="left-filters">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th"></i> All Reviews
+                        </button>
+                        <button class="filter-btn" data-filter="5">
+                            <i class="fas fa-star"></i> 5 Stars (2,618)
+                        </button>
+                        <button class="filter-btn" data-filter="4">
+                            <i class="fas fa-star"></i> 4 Stars (189)
+                        </button>
+                    </div>
+                    <div class="search-reviews">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search reviews..." id="reviewSearch">
+                    </div>
+                </div>
+                <div class="right-filters">
+                    <div class="sort-select">
+                        <select id="reviewSort">
+                            <option>Newest First</option>
+                            <option>Most Helpful</option>
+                            <option>Highest Rating</option>
+                            <option>Most Recent Purchases</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS GRID -->
+    <section class="reviews-section section-padding">
+        <div class="container">
+            <div id="reviewsContainer" class="reviews-grid">
+                <!-- Reviews will load here dynamically -->
+            </div>
+            <div class="load-more-section">
+                <button class="btn btn-primary btn-large" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Load More Reviews
+                </button>
+                <p class="reviews-end">You've seen all 2,847 reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WRITE REVIEW SECTION -->
+    <section class="write-review section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Share Your Experience</h2>
+                <p class="section-subtitle">Your feedback helps us improve and helps others discover our products</p>
+            </div>
+            
+            <div class="write-review-container">
+                <form class="review-form" id="writeReviewForm">
+                    <div class="form-top">
+                        <div class="user-info">
+                            <div class="avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Your Name" name="reviewerName" required>
+                                <input type="email" placeholder="Your Email" name="reviewerEmail" required>
+                            </div>
+                        </div>
+                        <div class="rating-section">
+                            <label>Your Rating</label>
+                            <div class="star-rating" id="starRating">
+                                <i class="far fa-star" data-value="1"></i>
+                                <i class="far fa-star" data-value="2"></i>
+                                <i class="far fa-star" data-value="3"></i>
+                                <i class="far fa-star" data-value="4"></i>
+                                <i class="far fa-star" data-value="5"></i>
+                            </div>
+                            <span class="rating-text">Click to rate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-bottom">
+                        <textarea name="reviewText" placeholder="Write your review... What did you love? What could be better?" rows="6" required></textarea>
+                        <div class="form-actions">
+                            <label class="photo-upload">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" accept="image/*" multiple>
+                                Add Photos
+                            </label>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit Review
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- Same footer as other pages -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Northwoods Soap Co.</h3>
+                    <p>Handcrafted luxury from nature's finest ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html?category=soap">Bar Soaps</a></li>
+                        <li><a href="products.html?category=candle">Candles</a></li>
+                        <li><a href="products.html?category=bath">Bath Bombs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Northwoods Soap Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

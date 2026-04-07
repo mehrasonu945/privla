@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products - Northwoods Soap Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER (Same as homepage) -->
+    <header class="header">
+        <!-- Copy exact header from index.html -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Northwoods Soap Co." class="logo-img">
+                    <span>Northwoods Soap</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link active"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-heart"></i> About</a></li>
+                    <li><a href="reviews.html" class="nav-link"><i class="fas fa-star"></i> Reviews</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span>3</span></a>
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SHOP BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <a href="index.html">Home</a> / <span>Shop</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SHOP HERO -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="shop-header">
+                <div>
+                    <h1>Our Collection</h1>
+                    <p class="shop-subtitle">42 products</p>
+                </div>
+                <div class="shop-actions">
+                    <div class="sort-select">
+                        <select id="sortSelect">
+                            <option>Sort by popularity</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIDEBAR + PRODUCTS -->
+    <section class="shop-main section-padding">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- SIDEBAR FILTERS -->
+                <aside class="shop-sidebar">
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-filter"></i> Categories</h3>
+                        <ul class="filter-list">
+                            <li><a href="?category=soap" data-category="soap">Bar Soaps <span>(12)</span></a></li>
+                            <li><a href="?category=candle" data-category="candle">Soy Candles <span>(10)</span></a></li>
+                            <li><a href="?category=bath" data-category="bath">Bath Bombs <span>(8)</span></a></li>
+                            <li><a href="?category=gifts" data-category="gifts">Gift Sets <span>(6)</span></a></li>
+                            <li><a href="?category=skincare" data-category="skincare">Skincare <span>(6)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-dollar-sign"></i> Price</h3>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="50" value="50">
+                            <div class="price-display">$0 - $<span id="priceValue">50</span></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-full">Apply Filters</button>
+                </aside>
+
+                <!-- PRODUCTS GRID -->
+                <main class="shop-content">
+                    <div id="product-grid" class="product-grid">
+                        <!-- Dynamic products load here -->
+                    </div>
+                    <div class="pagination">
+                        <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                        </span>
+                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as homepage) -->
+    <footer class="footer">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

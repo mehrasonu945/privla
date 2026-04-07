@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Northwoods Soap Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER (Same as all pages) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Northwoods Soap Co." class="logo-img">
+                    <span>Northwoods Soap</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link"><i class="fas fa-store"></i> Shop</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-heart"></i> About</a></li>
+                    <li><a href="reviews.html" class="nav-link"><i class="fas fa-star"></i> Reviews</a></li>
+                    <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span>0</span></a>
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <a href="index.html">Home</a> / <span>Contact Us</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you. Reach out with questions, wholesale inquiries, or just to say hello.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO + FORM -->
+    <section class="contact-main section-padding">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- CONTACT INFO -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>123 Pine Forest Rd<br>Northwoods, MT 59901</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>(406) 555-0123</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>hello@northwoodsoap.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>Mon-Fri: 9AM-5PM<br>Sat: 10AM-3PM<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Send Message</h2>
+                        <p>Fill out the form and we'll respond within 24 hours</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select name="subject" required>
+                                <option value="">Choose a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="wholesale">Wholesale</option>
+                                <option value="shipping">Shipping Issue</option>
+                                <option value="product">Product Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="6" placeholder="Tell us more about your inquiry..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large w-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="contact-map">
+        <div class="container">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.478086865372!2d-74.0061!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ3LjQiTiA3NMKwMDAnMzQuNSJX!5e0!3m2!1sen!2sus!4v1690000000000" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0; border-radius: 20px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our products and services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does shipping take?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Orders ship within 1-2 business days. USPS Priority Mail takes 2-5 days. Free shipping on orders over $50.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are your products natural?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! 100% natural ingredients, no synthetic fragrances or preservatives. Vegan and cruelty-free certified.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What's your return policy?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>30-day satisfaction guarantee. Unopened products can be returned for store credit or exchange.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer wholesale?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Contact us at wholesale@northwoodsoap.com for pricing and minimums.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as all pages) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Northwoods Soap Co.</h3>
+                    <p>Handcrafted luxury from nature's finest ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html?category=soap">Bar Soaps</a></li>
+                        <li><a href="products.html?category=candle">Candles</a></li>
+                        <li><a href="products.html?category=bath">Bath Bombs</a></li>
+                        <li><a href="products.html?category=gifts">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Northwoods Soap Co. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
